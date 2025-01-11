@@ -4,5 +4,6 @@ let screenPrice;
 let rollback;
 let fullPrice;
 let adaptive;
+
 alert("Hello!");
-console.log("Hello from the console");
+console.log("Hello from the console!");
