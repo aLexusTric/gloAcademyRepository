@@ -1,3 +1,4 @@
+'use strict';
 let title = "First project";
 let screens = "Простые, Сложные, Интерактивные";
 let screenPrice = 42;
@@ -11,7 +12,6 @@ console.log(typeof title, typeof fullPrice, typeof adaptive);
 console.log(screens.length);
 console.log("Стоимость верстки экранов " + screenPrice + "$");
 console.log("Стоимость разроботки сайта " + fullPrice + "$");
-screens.toLowerCase();
-console.log(screens.split(" "));
-brokerFeePercentage = fullPrice * (rollback / 100);
+console.log(screens.toLowerCase(screens.split(",")));
+let brokerFeePercentage = fullPrice * (rollback / 100);
 console.log(brokerFeePercentage);
