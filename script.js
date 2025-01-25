@@ -24,14 +24,10 @@ const showTypeOf = function (relevant){
 const getAllServicePrices = function (){
     return addServicePrice1 + addServicePrice2;
   }
-allServicePrice = getAllServicePrices(); 
 
 function getFullPrice(){
   return screenPrice + allServicePrice;
 }
-fullPrice = getFullPrice();
-brokerFeePercentage = fullPrice * (rollback / 100);
-servicePercentPrice = Math.ceil(fullPrice - brokerFeePercentage);
 
 function getRollbackMessage(){
     if (fullPrice >= 30000){
@@ -56,7 +52,12 @@ const getServicePercentPrices = function(){
 const getTitle = function(title) {
     return title.trim().charAt(0).toUpperCase() + title.trim().slice(1).toLowerCase();
 }
-    
+
+allServicePrice = getAllServicePrices(); 
+fullPrice = getFullPrice();
+brokerFeePercentage = fullPrice * (rollback / 100);
+servicePercentPrice = Math.ceil(fullPrice - brokerFeePercentage);
+
 console.log(showTypeOf(title));
 console.log(showTypeOf(screenPrice));
 console.log(showTypeOf(adaptive));
