@@ -3,19 +3,33 @@ alert("Hello!");
 
 let title = prompt("Как называется ваш проект?");
 let screens = prompt('Какие типы экранов нужно разработать?', 'пример: "Простые, Сложные, Интерактивные " ');
-let screenPrice = Number(prompt('Сколько будет стоить данная работа?'));
+let screenPrice;
 let adaptive = confirm("Нужен ли адаптив на сайте?");
 let rollback = 23;
 
-let addService1 = prompt('Какой дополнительный тип услуги нужен?', "пример: Service 1, Service 2");
-let addServicePrice1 = Number(prompt('Сколько это будет стоить?'));
+let addService1;
+let addServicePrice1;
 
-let addService2 = prompt('Какой дополнительный тип услуги нужен?', "пример: Service 1, Service 2");
-let addServicePrice2 = Number(prompt('Сколько это будет стоить?'));
+let addService2;
+let addServicePrice2;
 let allServicePrice;
 let fullPrice;
 let brokerFeePercentage;
 let servicePercentPrice;
+
+addService1 = prompt('Какой дополнительный тип услуги нужен?', "пример: Service 1, Service 2");
+while(isNaN(addServicePrice1) || addServicePrice1 <=0){
+    addServicePrice1 = Number(prompt('Сколько это будет стоить?'));
+}
+
+addService2 = prompt('Какой дополнительный тип услуги нужен?', "пример: Service 1, Service 2");
+while(isNaN(addServicePrice2) || addServicePrice2 <=0){
+    addServicePrice2 = Number(prompt('Сколько это будет стоить?'));
+}
+
+do{
+    screenPrice = Number(prompt('Сколько будет стоить данная работа?'));
+} while (isNaN(screenPrice) || screenPrice <= 0);
 
 const showTypeOf = function (relevant){
     return typeof(relevant);
